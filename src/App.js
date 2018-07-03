@@ -18,7 +18,7 @@ class App extends Component {
     renderer.link = (href, title, text) => {
       return `<a href="${href}" target="_blank" >${text}</a>`;
     };
-    if (markdown == '') return { __html: '' };
+    if (markdown === '') return { __html: '' };
     let markdownOptions = {
       renderer,
       breaks: true
@@ -63,52 +63,40 @@ class App extends Component {
   }
 }
 
-const markdown = `
-# Welcome to my React Markdown Previewer!
+const markdown = `# How to be a great web developer!
 
-## This is a sub-heading...
-### And here's some other cool stuff:
+## You want to be a great web developer?
+### Follow these steps:
+
+1. Choose a **Language & Framework**.
+2. Learn _Programming Fundamentals_.
+3. Data Structure & Algorithm [Basics].
+4. Learn basics of _the Framework_.
+5. Work on Small **_Assignments/Projects_**.
+  - Some project ideas:
+    - Simple To-do list
+    - Simple Blog
+    - Photo Gallery Web App
+    - Resume Builder
+    - Basic Project Management app
+6. ~~Wasting too much time doing none sense~~.
   
-Heres some code, \`<div></div>\`, between 2 backticks.
+Dabble with some code, \`<div>This is awesome</div>\`.
 
 \`\`\`
-// this is multi-line code:
+// Write some amazing codes:
 
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
+function devMastery(yourTime) {
+  yourTime.forEach(hour => {
+    return hardWork(hour)
+  })
 }
 \`\`\`
-  
-You can also make text **bold**... whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
 
-There's also [links](https://www.freecodecamp.com), and
-> Block Quotes!
+Talk to [me](https://alewiahmed.github.io/) if you want, I'll be glad to go on this journey with you.
+> "What one programmer can do in one month, two programmers can do in two months." - Fred Brooks!
 
-And if you want to get really crazy, even tables:
-
-Wild Header | Crazy Header | Another Header?
------------- | ------------- | ------------- 
-Your content can | be here, and it | can be here....
-And here. | Okay. | I think we get it.
-
-- And of course there are lists.
-  - Some are bulleted.
-     - With different indentation levels.
-        - That look like this.
-
-
-1. And there are numbererd lists too.
-1. Use just 1s if you want! 
-1. But the list goes on...
-- Even if you use dashes or asterisks.
-* And last but not least, let's not forget embedded images:
-
-![React Logo w/ Text](https://goo.gl/Umyytc)
+![React Logo w/ Text](https://alewiahmed.github.io/static/media/react.8c509e7e.svg)
 `;
 
 export default App;
