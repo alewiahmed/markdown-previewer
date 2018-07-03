@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import marked from 'marked';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
@@ -10,6 +11,17 @@ class App extends Component {
       markdown: markdown
     };
   }
+
+  previewMarkdown = () => {
+    let { markdown } = this.state;
+    return { __html: marked(markdown) };
+  };
+
+  handleChange = ({ target: { value } }) => {
+    this.setState({
+      markdown: value
+    });
+  };
   render() {
     let { markdown } = this.state;
     return (
@@ -20,13 +32,20 @@ class App extends Component {
         <div className="row pt-2 containers">
           <div className="col-md-6">
             <h4>Editor</h4>
-            <textarea id="editor" className="w-100 p-3" value={markdown} />
+            <textarea
+              id="editor"
+              value={markdown}
+              className="w-100 p-3"
+              onChange={this.handleChange}
+            />
           </div>
           <div className="col-md-6">
             <h4>Previewer</h4>
-            <div id="preview" className="w-100 p-3">
-              preview
-            </div>
+            <div
+              id="preview"
+              className="w-100 p-3"
+              dangerouslySetInnerHTML={this.previewMarkdown()}
+            />
           </div>
         </div>
       </div>

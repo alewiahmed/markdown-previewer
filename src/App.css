@@ -19,6 +19,7 @@
   outline: none;
   color: white;
   min-height: 200px;
+  overflow-y: scroll;
   border-radius: 5px;
   border: 2px solid gold;
   background-color: #222;
@@ -26,8 +27,10 @@
 }
 
 #preview {
+  text-align: left;
   min-height: 200px;
   border-radius: 5px;
+  overflow-y: scroll;
   border: 2px solid #222;
   height: calc(100% - 60px);
   background-color: #dddddd;
