@@ -14,7 +14,16 @@ class App extends Component {
 
   previewMarkdown = () => {
     let { markdown } = this.state;
-    return { __html: marked(markdown) };
+    const renderer = new marked.Renderer();
+    renderer.link = (href, title, text) => {
+      return `<a href="${href}" target="_blank" >${text}</a>`;
+    };
+    if (markdown == '') return { __html: '' };
+    let markdownOptions = {
+      renderer,
+      breaks: true
+    };
+    return { __html: marked(markdown, markdownOptions) };
   };
 
   handleChange = ({ target: { value } }) => {
@@ -34,6 +43,7 @@ class App extends Component {
             <h4>Editor</h4>
             <textarea
               id="editor"
+              type="text"
               value={markdown}
               className="w-100 p-3"
               onChange={this.handleChange}

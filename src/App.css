@@ -24,6 +24,7 @@
   border: 2px solid gold;
   background-color: #222;
   height: calc(100% - 60px);
+  box-shadow: 0px 0px 6px 5px #00000036;
 }
 
 #preview {
@@ -34,4 +35,31 @@
   border: 2px solid #222;
   height: calc(100% - 60px);
   background-color: #dddddd;
+  box-shadow: 0px 0px 6px 5px #00000036;
+}
+
+#preview code {
+  color: white;
+  font-size: 11px;
+  padding: 5px 1px;
+  font-weight: bold;
+  background: #222;
+}
+
+#preview blockquote {
+  margin-left: 30px;
+  padding-left: 5px;
+  border-left: 3px solid #000000;
+}
+
+#preview pre {
+  color: white;
+  padding: 5px 1px;
+  background: #222;
+}
+
+#preview td,
+#preview th {
+  padding: 5px;
+  border: 2px solid black;
 }
