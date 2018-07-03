@@ -1,14 +1,34 @@
-.App {
-  text-align: center;
-}
-
 .App-header {
-  background-color: #222;
-  height: 60px;
   padding: 20px;
   color: white;
+  background-color: #222;
 }
 
 .App-title {
+  color: gold;
   font-size: 1.5em;
+}
+
+.containers {
+  height: calc(100% - 76px);
+}
+
+#editor {
+  border: none;
+  resize: none;
+  outline: none;
+  color: white;
+  min-height: 200px;
+  border-radius: 5px;
+  border: 2px solid gold;
+  background-color: #222;
+  height: calc(100% - 60px);
+}
+
+#preview {
+  min-height: 200px;
+  border-radius: 5px;
+  border: 2px solid #222;
+  height: calc(100% - 60px);
+  background-color: #dddddd;
 }
