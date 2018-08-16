@@ -1,6 +1,6 @@
 # Markdown Previewer
 
-Markdown made for the Free Code Camp's Front End Development Course.
+Markdown Previewer made for the Free Code Camp's Front End Development Course.
 
 ![Markdown Previewer image](src/assets/markdown-previewer.png 'Markdown Preview')
 
@@ -11,10 +11,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Tech stacks used
 
 * [react](https://reactjs.org/)
-* [react-scroll](https://github.com/fisshy/react-scroll)
-* [Form Spree](https://formspree.io/)
 * [bootstrap](https://getbootstrap.com)
-* [fontawesome](https://fontawesome.com/)
+* [marked](https://marked.js.org/)
 
 ## Available Scripts
 
